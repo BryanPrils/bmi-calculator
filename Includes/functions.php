@@ -24,9 +24,9 @@ if (isset($_POST['weight'], $_POST['height'], $_POST["bmi"])){
 
     $q = $pdo->prepare($sql);
 
-    $q->bindParam(':weight', $weight , PDO::PARAM_INT);
-    $q->bindParam(':height', $height , PDO::PARAM_INT);
-    $q->bindParam(':bmi', $bmi, PDO::PARAM_INT);
+    $q->bindParam(':weight', $weight );
+    $q->bindParam(':height', $height );
+    $q->bindParam(':bmi', $bmi);
     $q->bindParam(':user', $user, PDO::PARAM_INT);
 
     $q->execute();
